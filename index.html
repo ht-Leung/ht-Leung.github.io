@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haotian Liang | Robotics Portfolio</title>
+    <meta
+      name="description"
+      content="Haotian Liang 的机器人项目作品集，按项目展示 Scibot、HIROLRobotPlatform、Goal conditioned RL、VLM grasping、Reliable Grasp、Dense Reward Model 与数据采集系统。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#overview">
+          <span class="brand-text">
+            <strong>Haotian Liang</strong>
+            <span>robotics portfolio</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="页面导航">
+          <a href="#overview" data-nav-link>Overview</a>
+          <a href="#projects" data-nav-link>Projects</a>
+          <a href="#systems" data-nav-link>Stack</a>
+        </nav>
+      </header>
+
+      <main class="profile-home">
+        <aside class="profile-sidebar reveal">
+          <section class="profile-card">
+            <img class="profile-avatar" src="assets/videos/profile.jpg" alt="Haotian Liang profile photo" />
+            <h2>Haotian Liang</h2>
+            <p class="profile-role">Robotics Learning / Platform Infra / Real-world Robotics</p>
+            <p class="profile-summary">
+              Hi! I'm Haotian Liang, working in robotics and embodied intelligence,
+              based in Shanghai Jiao Tong University and the Institute for Advanced
+              Algorithms Research, Shanghai (IAAR). I am a Research Engineer (RE)
+              at SJTU HIROL Lab under Professor Wenzhao Lian, and also work as a project manager.
+            </p>
+
+            <dl class="profile-meta">
+              <div>
+                <dt>Research Interests</dt>
+                <dd>Robotics &amp; Embodied Intelligence</dd>
+              </div>
+              <div>
+                <dt>Robot Manipulation</dt>
+                <dd>Contact-rich manipulation, dexterous skills, and robust control</dd>
+              </div>
+              <div>
+                <dt>Robot Learning</dt>
+                <dd>Policy learning, offline / online RL, imitation learning, VLA, and WAM</dd>
+              </div>
+              <div>
+                <dt>Robot Perception</dt>
+                <dd>Vision-based manipulation, sensor fusion, and representation learning</dd>
+              </div>
+              <div>
+                <dt>Collaboration</dt>
+                <dd>Interested in research collaborations and open-source projects</dd>
+              </div>
+            </dl>
+
+            <div class="profile-links">
+              <a href="#project-scibot">scibot</a>
+              <a href="#project-platform">HIROLRobotPlatform</a>
+              <a href="#project-goal-rl">goal-conditioned-rl</a>
+              <a href="#project-vlm">vlm-grasp-or-suction</a>
+              <a href="#project-reliable-grasp">reliable-grasp</a>
+              <a href="#project-reward">dense-reward-model</a>
+              <a href="#project-box-data">box-data-system</a>
+            </div>
+          </section>
+        </aside>
+
+        <div class="content-column">
+          <section class="section reveal" data-section id="overview">
+            <div class="section-heading">
+              <p class="eyebrow">Overview</p>
+              <h1>Robotics projects</h1>
+            </div>
+
+            <div class="overview-grid">
+              <section class="overview-panel">
+                <div class="panel-head">
+                  <h2>Project Map</h2>
+                  <span>selected work</span>
+                </div>
+                <div class="repo-grid">
+                  <article class="repo-card repo-card-featured">
+                    <div class="repo-topline">
+                      <a class="repo-name" href="#project-scibot">scibot</a>
+                      <span class="repo-flag">Agent</span>
+                    </div>
+                    <p class="repo-description">
+                      面向长序列实验操作的闭环系统，将实验协议转成任务图，并连接技能执行、状态监测和异常恢复。
+                    </p>
+                    <ul class="repo-meta-list">
+                      <li>Task graph</li>
+                      <li>State monitor</li>
+                      <li>Closed loop</li>
+                    </ul>
+                  </article>
+
+                  <article class="repo-card">
+                    <div class="repo-topline">
+                      <a class="repo-name" href="#project-platform">HIROLRobotPlatform</a>
+                      <span class="repo-flag">Infra</span>
+                    </div>
+                    <p class="repo-description">
+                      真实机器人项目的底座，承担运动学、IK、OTG、阻抗控制和数据采集。
+                    </p>
+                    <ul class="repo-meta-list">
+                      <li>Motion infra</li>
+                      <li>IK / OTG</li>
+                      <li>Control runtime</li>
+                    </ul>
+                  </article>
+
+                  <article class="repo-card">
+                    <div class="repo-topline">
+                      <a class="repo-name" href="#project-goal-rl">goal-conditioned-rl</a>
+                      <span class="repo-flag">RL</span>
+                    </div>
+                    <p class="repo-description">
+                      面向真机策略的在线训练系统，把目标条件、rollout、对象存储和策略更新组织成闭环。
+                    </p>
+                    <ul class="repo-meta-list">
+                      <li>Goal conditioned</li>
+                      <li>Online training</li>
+                      <li>Object storage</li>
+                    </ul>
+                  </article>
+
+                  <article class="repo-card">
+                    <div class="repo-topline">
+                      <a class="repo-name" href="#project-vlm">vlm-grasp-or-suction</a>
+                      <span class="repo-flag">Decision</span>
+                    </div>
+                    <p class="repo-description">
+                      将 VLM 作为语义-几何决策层，在目标属性、局部形状和末端可执行性之间选择 grasp 或 suction。
+                    </p>
+                    <ul class="repo-meta-list">
+                      <li>Affordance</li>
+                      <li>Grasp / suction</li>
+                      <li>Robot handoff</li>
+                    </ul>
+                  </article>
+
+                  <article class="repo-card">
+                    <div class="repo-topline">
+                      <a class="repo-name" href="#project-reliable-grasp">reliable-grasp</a>
+                      <span class="repo-flag">VLA</span>
+                    </div>
+                    <p class="repo-description">
+                      基于 Pi05 VLA 与 Yolo11-Seg 的 goal-conditioned package grasping，覆盖视觉锚定、
+                      E2E 策略部署和 benchmark。
+                    </p>
+                    <ul class="repo-meta-list">
+                      <li>Pi05 VLA</li>
+                      <li>Yolo11-Seg</li>
+                      <li>Benchmark</li>
+                    </ul>
+                  </article>
+
+                  <article class="repo-card">
+                    <div class="repo-topline">
+                      <a class="repo-name" href="#project-reward">dense-reward-model</a>
+                      <span class="repo-flag">Reward</span>
+                    </div>
+                    <p class="repo-description">
+                      将 VLM progress 和 dense reward 做成服务接口，为不同任务提供反馈信号。
+                    </p>
+                    <ul class="repo-meta-list">
+                      <li>VLM reward</li>
+                      <li>Progress model</li>
+                      <li>Service framework</li>
+                    </ul>
+                  </article>
+                </div>
+              </section>
+
+              <section class="overview-panel">
+                <div class="panel-head">
+                  <h2>Project Thread</h2>
+                  <span>system view</span>
+                </div>
+                <div class="feature-stack">
+                  <figure class="feature-clip">
+                    <div class="feature-frame">
+                      <video
+                        class="feature-video feature-video-tight"
+                        src="assets/videos/scibot_2.compact.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      ></video>
+                    </div>
+                    <figcaption>Scibot closed-loop execution with position perturbation</figcaption>
+                  </figure>
+                  <figure class="feature-clip">
+                    <div class="feature-frame">
+                      <video
+                        class="feature-video feature-video-tight"
+                        src="assets/videos/vlm-grasp-or-suction.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                      ></video>
+                    </div>
+                    <figcaption>VLM grasp-or-suction decision demo</figcaption>
+                  </figure>
+                </div>
+                <ul class="overview-notes">
+                  <li>上层是任务智能体：Scibot 将实验目标、协议和资源约束转成可监测、可恢复的任务图。</li>
+                  <li>底层是机器人平台：HIROLRobotPlatform 负责运动控制、数据采集和真机执行。</li>
+                  <li>中间是学习与反馈：Goal conditioned RL、VLA、VLM decision 和 dense reward 共同提供策略与监督信号。</li>
+                  <li>数据系统贯穿其中：长期有效数据支撑训练、评测和复现实验。</li>
+                </ul>
+              </section>
+            </div>
+          </section>
+
+          <section class="section reveal" data-section id="projects">
+            <div class="section-heading">
+              <p class="eyebrow">Projects</p>
+              <h2>Project details</h2>
+              <p>
+                项目按系统层级和展示优先级排列。每个项目以背景定位、实现范围和媒体展示组织，
+                突出实际系统内容与项目之间的连接。
+              </p>
+            </div>
+
+            <div class="project-list">
+              <article class="project-entry reveal" id="project-scibot">
+                <div class="entry-header">
+                  <div class="entry-heading">
+                    <p class="entry-kicker">Project 01 / Agent</p>
+                    <h2>scibot</h2>
+                    <p class="entry-summary">
+                      面向长序列实验操作的闭环智能体系统。核心是把实验目标、协议文本、
+                      平台约束和状态反馈编排成可执行、可监测、可恢复的机器人任务图。
+                    </p>
+                  </div>
+                  <ul class="entry-meta">
+                    <li>Task graph</li>
+                    <li>Data-driven E2E</li>
+                    <li>VLA / WAM</li>
+                  </ul>
+                </div>
+
+                <div class="entry-layout scibot-layout">
+                  <div class="entry-readme">
+                    <section class="readme-block">
+                      <h3>Overview</h3>
+                      <p>
+                        Scibot 面向长序列实验操作，不把机器人看成单个动作执行器，而是把实验协议、
+                        资源约束、技能调用和状态反馈组织成可执行的闭环任务系统。每个子步骤都被表示为
+                        带输入资源、目标状态、执行技能、成功判据和恢复策略的任务节点。
+                      </p>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Architecture</h3>
+                      <ul>
+                        <li>Agentic 流程编排层：从实验目标、协议或 SOP 生成任务图、状态机或行为树。</li>
+                        <li>技能执行层：统一接入规则技能、感知-规划-控制技能和 data-driven E2E action model。</li>
+                        <li>感知与观测层：整合多相机图像、机器人状态、设备状态和任务上下文。</li>
+                        <li>状态监测层：判断子步骤是否完成、失败、不确定或需要恢复动作。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Action model</h3>
+                      <ul>
+                        <li>动作层采用 data-driven E2E model，将观测、任务上下文和执行动作放在同一策略接口下。</li>
+                        <li>VLA 与 WAM 可作为可替换的策略后端，在相同任务节点、状态判据和日志口径下 benchmarking。</li>
+                        <li>动作结束后通过视觉、机器人状态和任务上下文确认真实实验状态，并触发重试、回退或重新规划。</li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <div class="entry-media-grid scibot-media-stack">
+                    <figure class="media-card">
+                      <div class="media-frame">
+                        <video
+                          src="assets/videos/scibot.compact.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>pi05 demo / Scibot 长序列实验闭环演示</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                      <div class="media-frame media-frame-contain-dark">
+                        <video
+                          src="assets/videos/scibot_2.compact.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>pi05 demo / 人为位置干扰下的闭环执行</figcaption>
+                    </figure>
+                    <figure class="media-card scibot-portrait-card">
+                      <div class="media-frame media-frame-contain-dark">
+                        <video
+                          src="assets/videos/liquit_transfer.MP4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>pi05 demo / Liquid transfer E2E action execution</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-entry reveal" id="project-platform">
+                <div class="entry-header">
+                  <div class="entry-heading">
+                    <p class="entry-kicker">Project 02 / Platform Infra</p>
+                    <h2>HIROLRobotPlatform</h2>
+                    <p class="entry-summary">
+                      运控与数据采集基础设施。主要贡献集中在运动学、IK、OTG 和 impedance control，
+                      为策略 rollout、数据采集和长期真机实验提供稳定执行层。
+                    </p>
+                  </div>
+                  <ul class="entry-meta">
+                    <li>Motion control</li>
+                    <li>Data collection</li>
+                    <li>Control runtime</li>
+                  </ul>
+                </div>
+
+                <div class="repo-source">
+                  <span>Repository</span>
+                  <a href="https://github.com/linkage-x/HIROLRobotPlatform">github.com/linkage-x/HIROLRobotPlatform</a>
+                  <code>git@github.com:linkage-x/HIROLRobotPlatform.git</code>
+                </div>
+
+                <div class="entry-layout entry-layout-text-only">
+                  <div class="entry-readme">
+                    <section class="readme-block">
+                      <h3>Built</h3>
+                      <ul>
+                        <li>运动学与 robot model 接口整理。</li>
+                        <li>IK 求解链路搭建，用于策略、规划和真机执行之间的目标转换。</li>
+                        <li>OTG / Ruckig 执行层，用于平滑追踪高频目标流。</li>
+                        <li>Impedance control 接入与真机调试。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Why it matters</h3>
+                      <p>
+                        Goal conditioned RL、grasping、reward model 和数据采集系统都依赖稳定的底层执行。
+                        这个平台承担的是机器人学习项目里的共同底座，而不是单个 demo 的临时控制代码。
+                      </p>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Runtime role</h3>
+                      <ul>
+                        <li>将 robot model、IK、trajectory target 和 controller interface 收敛到统一执行入口。</li>
+                        <li>为高频策略输出提供 OTG / Ruckig 重定时，降低动作突变对真机执行的影响。</li>
+                        <li>同一底层能力可复用于数据采集、policy rollout、在线评测与长期实验。</li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-entry reveal" id="project-goal-rl">
+                <div class="entry-header">
+                  <div class="entry-heading">
+                    <p class="entry-kicker">Project 03 / Real-world RL</p>
+                    <h2>goal-conditioned-rl</h2>
+                    <p class="entry-summary">
+                      面向多目标真机策略的在线训练系统。运控基于 HIROLRobotPlatform，
+                      系统侧负责组织 rollout、对象存储、训练任务、策略版本和评测回流。
+                    </p>
+                  </div>
+                  <ul class="entry-meta">
+                    <li>Goal conditioned</li>
+                    <li>Online training</li>
+                    <li>Object storage</li>
+                  </ul>
+                </div>
+
+                <div class="entry-layout">
+                  <div class="entry-readme">
+                    <section class="readme-block">
+                      <h3>Overview</h3>
+                      <p>
+                        单任务策略很容易被环境、目标位置和初始化方式锁死。Goal conditioned RL 的重点是把
+                        “目标”显式纳入任务定义，让真机强化学习从固定目标推进到多目标条件下的可泛化执行。
+                      </p>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Architecture</h3>
+                      <ul>
+                        <li>底层运控：HIROLRobotPlatform。</li>
+                        <li>执行侧：真机 rollout 持续产生 on-policy trajectories、intervention signals 和 episode metadata。</li>
+                        <li>存储侧：对象存储管理多视角观测、动作序列、奖励信号、任务配置和策略 checkpoint。</li>
+                        <li>训练侧：异步消费新数据，更新 goal-conditioned policy，并将策略版本回流到执行侧评测。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>System loop</h3>
+                      <ul>
+                        <li>以多目标任务定义为核心，统一 rollout、training job、policy registry 和 evaluation report。</li>
+                        <li>执行、存储、训练和评测模块解耦，支持不同任务、brain 和 reward source 的组合。</li>
+                        <li>目标是让真机交互数据可以持续进入训练闭环，而不是停留在离线数据集和一次性实验脚本。</li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <div class="entry-media-grid goal-rl-media-stack">
+                    <figure class="media-card">
+                      <div class="media-frame">
+                        <video
+                          src="assets/videos/goalconditioned.rlinsert.compact.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>Goal-conditioned real-world rollout</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                      <div class="media-frame">
+                        <video
+                          src="assets/videos/hilserl_highlight.compact.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>HIL-SERL highlight / online training loop</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-entry reveal" id="project-vlm">
+                <div class="entry-header">
+                  <div class="entry-heading">
+                    <p class="entry-kicker">Project 04 / VLM Decision</p>
+                    <h2>vlm-based-grasping-or-suction</h2>
+                    <p class="entry-summary">
+                      A VLM-driven affordance router for choosing between grasping and suction. The system turns
+                      object semantics, mask-level geometry and scene context into an executable manipulation primitive.
+                    </p>
+                  </div>
+                  <ul class="entry-meta">
+                    <li>VLM</li>
+                    <li>Affordance routing</li>
+                    <li>Robot handoff</li>
+                  </ul>
+                </div>
+
+                <div class="entry-layout">
+                  <div class="entry-readme">
+                    <section class="readme-block">
+                      <h3>Perception prompt</h3>
+                      <ul>
+                        <li>目标 crop、mask、场景图像和必要的几何摘要共同构成 VLM prompt。</li>
+                        <li>Prompt 不只描述“是什么物体”，还显式表达目标区域、边界形状、可吸附表面和遮挡关系。</li>
+                        <li>多视角或低置信样本通过投票与一致性检查降低偶发误判。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Decision policy</h3>
+                      <ul>
+                        <li>输出 grasp / suction 选择、置信度、简短 reasoning 和可执行性提示。</li>
+                        <li>决策逻辑结合语义属性、局部几何、接触面质量和末端执行器约束。</li>
+                        <li>目标是把 VLM 的开放世界理解压缩成机器人可消费的离散 action primitive。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Robot handoff</h3>
+                      <p>
+                        VLM 不直接控制机械臂，而是位于 perception 与 motion execution 之间：
+                        它选择操作模式并提供可解释的决策信号，再交给底层抓取、吸取和可达性检查链路执行。
+                        主要工程约束来自吸嘴硬件能力、深度质量、表面法向估计和极端姿态可达性。
+                      </p>
+                    </section>
+                  </div>
+
+                  <div class="entry-media-grid entry-media-grid-single vlm-media-center">
+                    <figure class="media-card">
+                      <div class="media-frame">
+                        <video
+                          src="assets/videos/vlm-grasp-or-suction.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>VLM 决策与执行链路演示</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-entry reveal" id="project-reliable-grasp">
+                <div class="entry-header">
+                  <div class="entry-heading">
+                    <p class="entry-kicker">Project 05 / Grasping + VLA</p>
+                    <h2>reliable-grasp</h2>
+                    <p class="entry-summary">
+                      Goal-conditioned package grasping system based on Pi05 VLA and Yolo11-Seg visual grounding.
+                      项目重点是把目标条件、数据闭环、策略部署和 benchmark 组织成可复现实验框架。
+                    </p>
+                  </div>
+                  <ul class="entry-meta">
+                    <li>Package grasp</li>
+                    <li>Pi05 VLA</li>
+                    <li>Benchmark</li>
+                  </ul>
+                </div>
+
+                <div class="entry-layout">
+                  <div class="entry-readme">
+                    <section class="readme-block">
+                      <h3>System</h3>
+                      <ul>
+                        <li>使用 Yolo11-Seg 作为轻量级视觉锚点，将颜色目标、mask、box 和 center 信息输入 Pi05 VLA。</li>
+                        <li>Agent / Server 异步推理架构支持真机端实时调用、日志记录和策略切换。</li>
+                        <li>推理侧加入 Kalman filter 与 Temporal Ensembling，降低目标框抖动和长动作 chunk 的累计误差。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Data & infra</h3>
+                      <ul>
+                        <li>提供 package grasp codebase 与 code infra，支撑数据采集、清洗、训练、推理和评测闭环。</li>
+                        <li>指导两名 PRP 学生完成数据构建、策略对比、实验验证和答辩材料整理。</li>
+                        <li>整体数据采集工作已累计有效数据数千小时，PRP / package grasp 部分形成可追踪实验记录。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Benchmark</h3>
+                      <ul>
+                        <li>比较 Prompt-only、Info-mask、Box+Center 等目标条件输入策略。</li>
+                        <li>评估 single-grasp success rate 与 long-horizon progress extent。</li>
+                        <li>保留策略、动作空间、任务版本和失败类型的对照记录，用于回归测试。</li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <div class="entry-media-grid entry-media-grid-compact reliable-media-grid">
+                    <figure class="media-card">
+                      <div class="media-frame">
+                        <video
+                          src="assets/videos/reliable-grasp/VAHFDsK2XmM.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>Success demo / goal-conditioned package grasp</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                      <div class="media-frame">
+                        <video
+                          src="assets/videos/reliable-grasp/VAHFDr_6dIc.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="none"
+                          data-preview
+                        ></video>
+                      </div>
+                      <figcaption>Success demo / target-conditioned grasp execution</figcaption>
+                    </figure>
+                    <figure class="media-card media-card-wide">
+                      <div class="media-frame media-frame-light media-frame-chart">
+                        <img src="assets/images/reliable-grasp/image16.png" alt="Yolo11-Seg target grounding visualization" loading="lazy" />
+                      </div>
+                      <figcaption>Yolo11-Seg visual grounding: top-view / wrist-view target condition</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                      <div class="media-frame media-frame-light media-frame-chart">
+                        <img src="assets/images/reliable-grasp/image28.png" alt="Strategy benchmark comparison" loading="lazy" />
+                      </div>
+                      <figcaption>Prompt-only / Info-mask / Box+Center strategy benchmark</figcaption>
+                    </figure>
+                    <figure class="media-card">
+                      <div class="media-frame media-frame-light media-frame-chart">
+                        <img src="assets/images/reliable-grasp/image30.png" alt="Temporal ensemble ablation" loading="lazy" />
+                      </div>
+                      <figcaption>Temporal Ensembling ablation for action chunk execution</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-entry reveal" id="project-reward">
+                <div class="entry-header">
+                  <div class="entry-heading">
+                    <p class="entry-kicker">Project 06 / Reward Service</p>
+                    <h2>dense-reward-model</h2>
+                    <p class="entry-summary">
+                      VLM based dense reward / progress model。项目目标是把 reward 计算从具体任务代码中解耦出来，
+                      做成可支持多种 brain、VLM API 和下游 RL 任务的服务框架。
+                    </p>
+                  </div>
+                  <ul class="entry-meta">
+                    <li>Dense reward</li>
+                    <li>VLM API</li>
+                    <li>Service framework</li>
+                  </ul>
+                </div>
+
+                <div class="entry-layout">
+                  <div class="entry-readme">
+                    <section class="readme-block">
+                      <h3>Overview</h3>
+                      <p>
+                        真实机器人强化学习通常卡在 reward 设计和可迁移性上。Dense Reward Model
+                        把任务进度判断、VLM 推理和 reward 输出做成服务层，使不同任务可以共享同一套反馈接口。
+                      </p>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Design</h3>
+                      <ul>
+                        <li>VLM based progress estimation。</li>
+                        <li>解耦 brain、VLM API 与任务环境。</li>
+                        <li>服务化 reward 输出，支持 RL 训练和在线评估。</li>
+                      </ul>
+                    </section>
+                    <section class="readme-block">
+                      <h3>Interfaces</h3>
+                      <ul>
+                        <li>提供统一 reward service 接口。</li>
+                        <li>支持通过服务接口接入训练任务、在线评估和模型迭代。</li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <div class="entry-media-grid entry-media-grid-single reward-media-center">
+                    <figure class="media-card">
+                      <div class="media-frame media-frame-contain reward-diagram-frame">
+                        <img src="assets/images/rewardserver.png" alt="Dense reward model server architecture" loading="lazy" />
+                      </div>
+                      <figcaption>VLM reward 服务框架与模型迭代结构</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-entry reveal project-entry-secondary" id="project-box-data">
+                <div class="entry-header">
+                  <div class="entry-heading">
+                    <p class="entry-kicker">Project 07 / Data System</p>
+                    <h2>box-data-collection-system</h2>
+                    <p class="entry-summary">
+                      面向 box 场景的数据采集系统。项目用于补足机器人学习系统中的长期数据生产、
+                      质检和任务回放能力。
+                    </p>
+                  </div>
+                  <ul class="entry-meta">
+                    <li>Data collection</li>
+                    <li>Data pipeline</li>
+                    <li>Task replay</li>
+                  </ul>
+                </div>
+
+                <div class="entry-layout entry-layout-secondary">
+                  <div class="entry-readme">
+                    <section class="readme-block">
+                      <h3>Role in the stack</h3>
+                      <p>
+                        Box 数据采集系统用于补足长期数据生产能力，与 HIROLRobotPlatform 的运控底座、
+                        goal conditioned tasks 和训练评测链路衔接。
+                      </p>
+                    </section>
+                  </div>
+                  <div class="demo-placeholder demo-placeholder-small">
+                    <span>DATA LAYER</span>
+                    <strong>Box-oriented data collection system.</strong>
+                    <p>覆盖采集 UI、数据质检、任务回放与长期数据生产链路。</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section reveal" data-section id="systems">
+            <div class="section-heading">
+              <p class="eyebrow">Stack</p>
+              <h2>Technical focus</h2>
+              <p>
+                Methods, tooling, and engineering practices used across real robot learning projects.
+              </p>
+            </div>
+
+            <div class="systems-grid">
+              <article class="system-card">
+                <h3>Robotics Control</h3>
+                <p>Motion generation and control for real robot manipulation.</p>
+                <ul class="system-list">
+                  <li>Kinematics and robot model interfaces</li>
+                  <li>Online trajectory generation</li>
+                  <li>Impedance control</li>
+                  <li>Real-robot debugging</li>
+                </ul>
+              </article>
+
+              <article class="system-card">
+                <h3>Robot Learning</h3>
+                <p>Learning-based methods for goal-conditioned and data-driven robot behavior.</p>
+                <ul class="system-list">
+                  <li>Policy learning</li>
+                  <li>Goal-conditioned RL</li>
+                  <li>Offline / online RL</li>
+                  <li>Imitation learning</li>
+                  <li>VLA / WAM training and evaluation</li>
+                </ul>
+              </article>
+
+              <article class="system-card">
+                <h3>Perception & Evaluation</h3>
+                <p>Perception-driven decision making and evaluation workflows for manipulation tasks.</p>
+                <ul class="system-list">
+                  <li>Vision-based manipulation</li>
+                  <li>VLM-based decision making</li>
+                  <li>Dense reward / progress models</li>
+                  <li>Benchmark design</li>
+                  <li>Failure analysis</li>
+                </ul>
+              </article>
+
+              <article class="system-card">
+                <h3>Engineering Tooling</h3>
+                <p>Software and infrastructure tools for robot development, experiment orchestration, and deployment.</p>
+                <ul class="system-list">
+                  <li>Python, Linux, Git</li>
+                  <li>ROS / ROS2</li>
+                  <li>Docker, Conda</li>
+                  <li>Data logging, object storage, and replay</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <p>Haotian Liang · Robotics Learning &amp; Platform Infra · Project Portfolio</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
