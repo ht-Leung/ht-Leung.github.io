@@ -244,6 +244,7 @@ a {
 }
 
 .section {
+  scroll-margin-top: 5.75rem;
   display: grid;
   gap: 1.25rem;
 }
@@ -437,6 +438,7 @@ a {
 }
 
 .project-entry {
+  scroll-margin-top: 5.75rem;
   padding: 1.15rem;
 }
 
@@ -480,6 +482,11 @@ a {
 
 .entry-layout-secondary {
   grid-template-columns: minmax(280px, 1fr) minmax(260px, 0.7fr);
+}
+
+.box-sync-layout {
+  grid-template-columns: minmax(300px, 0.95fr) minmax(320px, 1.05fr);
+  align-items: center;
 }
 
 .repo-source {
@@ -708,6 +715,16 @@ a {
 }
 
 .media-frame-contain-dark video {
+  object-fit: contain;
+}
+
+.box-sync-media-stack {
+  align-self: center;
+  gap: 0.75rem;
+}
+
+.box-sync-media .media-frame video {
+  aspect-ratio: 16 / 9;
   object-fit: contain;
 }
 

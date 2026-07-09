@@ -21,11 +21,23 @@ const navObserver = new IntersectionObserver(
 
 sections.forEach((section) => navObserver.observe(section));
 
+const showRevealTarget = (target) => {
+  target.classList.add("is-visible");
+};
+
+const showRevealChain = (target) => {
+  let current = target;
+  while (current && current !== document.documentElement) {
+    if (current.classList?.contains("reveal")) showRevealTarget(current);
+    current = current.parentElement;
+  }
+};
+
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
+      showRevealTarget(entry.target);
       observer.unobserve(entry.target);
     });
   },
@@ -34,7 +46,32 @@ const revealObserver = new IntersectionObserver(
   }
 );
 
-revealTargets.forEach((item) => revealObserver.observe(item));
+const isInViewport = (item) => {
+  const rect = item.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom > 0;
+};
+
+const revealHashTarget = () => {
+  if (!window.location.hash) return;
+  const target = document.querySelector(window.location.hash);
+  const revealTarget = target?.closest(".reveal");
+  if (revealTarget) showRevealChain(revealTarget);
+};
+
+if (window.location.hash) {
+  revealTargets.forEach(showRevealTarget);
+} else {
+  revealTargets.forEach((item) => {
+    if (isInViewport(item)) {
+      showRevealChain(item);
+      return;
+    }
+    revealObserver.observe(item);
+  });
+}
+
+requestAnimationFrame(revealHashTarget);
+window.addEventListener("hashchange", () => requestAnimationFrame(revealHashTarget));
 
 const enableVideoPreview = (video) => {
   let previewing = false;

@@ -75,7 +75,7 @@
               <a href="#project-vlm">vlm-grasp-or-suction</a>
               <a href="#project-reliable-grasp">reliable-grasp</a>
               <a href="#project-reward">dense-reward-model</a>
-              <a href="#project-box-data">box-data-system</a>
+              <a href="#project-embodiment-free-data">embodiment-free-data</a>
             </div>
           </section>
         </aside>
@@ -226,13 +226,13 @@
                   <li>上层是任务智能体：Scibot 将实验目标、协议和资源约束转成可监测、可恢复的任务图。</li>
                   <li>底层是机器人平台：HIROLRobotPlatform 负责运动控制、数据采集和真机执行。</li>
                   <li>中间是学习与反馈：Goal conditioned RL、VLA、VLM decision 和 dense reward 共同提供策略与监督信号。</li>
-                  <li>数据系统贯穿其中：长期有效数据支撑训练、评测和复现实验。</li>
+                  <li>数据系统贯穿其中：无本体采集项目负责多视角数据生产、同步一致性和质量验收。</li>
                 </ul>
               </section>
             </div>
           </section>
 
-          <section class="section reveal" data-section id="projects">
+          <section class="section" data-section id="projects">
             <div class="section-heading">
               <p class="eyebrow">Projects</p>
               <h2>Project details</h2>
@@ -293,7 +293,7 @@
                     <figure class="media-card">
                       <div class="media-frame">
                         <video
-                          src="assets/videos/scibot.compact.mp4"
+                          src="assets/videos/scibot-closed-loop-demo.mp4"
                           controls
                           muted
                           loop
@@ -302,7 +302,7 @@
                           data-preview
                         ></video>
                       </div>
-                      <figcaption>pi05 demo / Scibot 长序列实验闭环演示</figcaption>
+                      <figcaption>Scibot 长序列实验闭环演示</figcaption>
                     </figure>
                     <figure class="media-card">
                       <div class="media-frame media-frame-contain-dark">
@@ -681,37 +681,68 @@
                 </div>
               </article>
 
-              <article class="project-entry reveal project-entry-secondary" id="project-box-data">
+              <article class="project-entry reveal project-entry-secondary" id="project-embodiment-free-data">
                 <div class="entry-header">
                   <div class="entry-heading">
                     <p class="entry-kicker">Project 07 / Data System</p>
-                    <h2>box-data-collection-system</h2>
+                    <h2>embodiment-free-data-collection</h2>
                     <p class="entry-summary">
-                      面向 box 场景的数据采集系统。项目用于补足机器人学习系统中的长期数据生产、
-                      质检和任务回放能力。
+                      面向无本体场景的数据采集项目。工作重点是把多视角视觉数据、同步一致性、
+                      采集质量和项目交付组织成稳定的数据生产流程。
                     </p>
                   </div>
                   <ul class="entry-meta">
-                    <li>Data collection</li>
-                    <li>Data pipeline</li>
-                    <li>Task replay</li>
+                    <li>Project management</li>
+                    <li>Multi-camera sync</li>
+                    <li>Data quality</li>
                   </ul>
                 </div>
 
-                <div class="entry-layout entry-layout-secondary">
+                <div class="entry-layout entry-layout-secondary box-sync-layout">
                   <div class="entry-readme">
                     <section class="readme-block">
-                      <h3>Role in the stack</h3>
+                      <h3>Project scope</h3>
                       <p>
-                        Box 数据采集系统用于补足长期数据生产能力，与 HIROLRobotPlatform 的运控底座、
-                        goal conditioned tasks 和训练评测链路衔接。
+                        该项目面向没有机器人本体参与的数据采集场景，核心目标是建立可重复、
+                        可验收、可追踪的数据生产流程。职责范围包括项目 PM、
+                        需求拆解、进度推进和验收口径整理；研发部分主要集中在多路相机同步与
+                        跨流一致性处理。
                       </p>
+                      <ul>
+                        <li>将同步问题从“后处理对齐”提升为采集链路中的一等数据契约，保证多视角样本在语义和时间上可被稳定消费。</li>
+                        <li>围绕跨相机一致性、录制边界、异常片段和质量标记建立检查逻辑，降低下游训练和 QA 的隐性数据噪声。</li>
+                        <li>输出面向数据闭环的采集单元，使数据能够进入回放、筛选、标注和评测流程，而不是停留在原始视频文件层面。</li>
+                      </ul>
                     </section>
                   </div>
-                  <div class="demo-placeholder demo-placeholder-small">
-                    <span>DATA LAYER</span>
-                    <strong>Box-oriented data collection system.</strong>
-                    <p>覆盖采集 UI、数据质检、任务回放与长期数据生产链路。</p>
+                  <div class="entry-media-grid entry-media-grid-single box-sync-media-stack">
+                    <figure class="media-card box-sync-media">
+                      <div class="media-frame media-frame-contain-dark">
+                        <video
+                          src="assets/videos/box-multicam-sync.mp4"
+                          autoplay
+                          controls
+                          loop
+                          muted
+                          playsinline
+                          preload="metadata"
+                        ></video>
+                      </div>
+                      <figcaption>Multi-camera synchronized collection demo</figcaption>
+                    </figure>
+                    <figure class="media-card box-sync-media">
+                      <div class="media-frame media-frame-contain-dark">
+                        <video
+                          src="assets/videos/embodiment-free-8cam-grid.mp4"
+                          controls
+                          muted
+                          loop
+                          playsinline
+                          preload="metadata"
+                        ></video>
+                      </div>
+                      <figcaption>8-camera grid recording sample</figcaption>
+                    </figure>
                   </div>
                 </div>
               </article>
