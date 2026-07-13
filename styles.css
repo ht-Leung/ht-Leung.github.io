@@ -610,6 +610,22 @@ a {
   aspect-ratio: 16 / 9;
 }
 
+.architecture-card {
+  margin-top: 0;
+}
+
+.architecture-frame {
+  display: grid;
+  place-items: center;
+  padding: 0.35rem;
+}
+
+.goal-rl-media-stack .architecture-frame img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
 .scibot-media-stack {
   align-self: stretch;
   grid-template-columns: 1fr;
