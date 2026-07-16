@@ -610,6 +610,11 @@ a {
   aspect-ratio: 16 / 9;
 }
 
+.goal-rl-media-stack .goal-rl-multiview-card .media-frame video {
+  aspect-ratio: 3 / 1;
+  object-fit: contain;
+}
+
 .architecture-card {
   margin-top: 0;
 }
