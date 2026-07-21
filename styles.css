@@ -641,6 +641,11 @@ a {
   aspect-ratio: 16 / 9;
 }
 
+.scibot-media-stack .scibot-full-demo-card .media-frame video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
 .scibot-portrait-card {
   width: min(100%, 280px);
   margin: 0 auto;

@@ -75,10 +75,11 @@ window.addEventListener("hashchange", () => requestAnimationFrame(revealHashTarg
 
 const enableVideoPreview = (video) => {
   let previewing = false;
+  let manualControl = false;
 
   const playPreview = async () => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (previewing) return;
+    if (previewing || manualControl) return;
 
     previewing = true;
     video.muted = true;
@@ -90,16 +91,21 @@ const enableVideoPreview = (video) => {
   };
 
   const stopPreview = () => {
-    if (!previewing) return;
+    if (!previewing || manualControl) return;
     video.pause();
     video.currentTime = 0;
     previewing = false;
   };
 
+  const enableManualControl = () => {
+    manualControl = true;
+    previewing = false;
+  };
+
   video.addEventListener("mouseenter", playPreview);
   video.addEventListener("mouseleave", stopPreview);
-  video.addEventListener("focus", playPreview);
-  video.addEventListener("blur", stopPreview);
+  video.addEventListener("pointerdown", enableManualControl);
+  video.addEventListener("keydown", enableManualControl);
 };
 
 previewVideos.forEach(enableVideoPreview);
